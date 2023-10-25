@@ -8,11 +8,11 @@ Using NLP to identify online harassment
 * [BERT Collab Notebook](https://colab.research.google.com/drive/1cpWFaNgGR0gjVR4oKRShtcNb1ps4hBTI?usp=sharing)
 
 ## Overview and Understanding
-Online harassment is a pervasive issue that affects a significant portion of the population, with serious consequences for individuals and society. According to a 2021 Pew research poll, a majority of respondents believe that social media companies are not doing enough to address online harassment. Harassment affects various demographics, with women and LGBTQ+ individuals being particularly vulnerable.
+Online harassment is a pervasive issue that affects a significant portion of the population, with serious consequences for individuals and society. According to a 2021 Pew research poll, a majority of respondents believe that social media companies are not doing enough to address online harassment. Harassment affects everyone, but has a more significant impact on BIPOC and LGBTQIA communities, as well as women.
 
-Social media platforms play a crucial role in disseminating information and shaping public sentiment. The misuse of these platforms can lead to severe consequences. Detecting and addressing hate speech and toxic comments are essential tasks in the information age.
+Social media platforms play a crucial role in disseminating information and shaping public sentiment. Therefore, use of social media sites through creation of a hostile environment by an extreme few can not, and should not be condoned. Detecting and addressing hate speech and toxic comments are essential tasks in the information age.
 
-The goal of this capstone project is to build a virtual moderator (vMOD) using Natural Language Processing (NLP) techniques. The vMOD will accurately predict whether a comment is harassment or not. This model will not only help in reducing the impact of toxic commentary but also alleviate the psychological burden on human moderators.
+Our client, a small social media site that specializes in neighborhood forums, is looking to combat an uptick in trolling on their site.  The goal of this capstone project is to build a virtual moderator (vMOD) using Natural Language Processing (NLP) techniques. The vMOD will accurately predict whether a comment is harassment or not. This model will not only help in reducing the impact of toxic commentary but also alleviate the financial onus of needing to employ a large group of human moderators, in addition to lessening the emotional toll of the remaining human moderators.
 
 ## Data Understanding
 
