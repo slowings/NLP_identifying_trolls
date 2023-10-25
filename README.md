@@ -19,27 +19,46 @@ Our client, a small social media site that specializes in neighborhood forums, i
 Our dataset is derived from the Kaggle competition titled [Identifying Toxic Comments: Jigsaw Toxic Comment Classification Challenge](https://www.kaggle.com/competitions/jigsaw-toxic-comment-classification-challenge/data). It contains 159,571 comments from Wikipedia, with six target variables: toxic, severe_toxic, obscene, threat, insult, and identity_hate.
 
 
+<img width="715" alt="Screenshot 2023-10-25 at 4 45 58 PM" src="https://github.com/slowings/NLP_identifying_trolls/assets/113614318/f8e05b2c-7a00-4e3a-a51f-286acfe6f2b8">
+
+
 ## Data Preprocessing
 
-We began by cleaning and preprocessing the data. We removed stopwords and applied various regex expressions to clean the comments, removing non-ASCII characters, websites, and non-words. We also considered the length of comments to prepare for tokenization.
+We began by cleaning and preprocessing the data.  We used two tecniques for preprocessing: 
+1. A regex function for our MNB model: 
+  * remove stopwords
+  * removing non-ASCII characters, websites, and non-words
+  * replacing contractions
+  * removing punctuation and blank space
+  * removing stopwords
+
+2. For our model with embeddings we:
+   * tokenized data
+   * padded sequences
+
+We also considered the length of comments to prepare for tokenization.
 
 ## Model and Evaluation
 
-We explored different models, including a Multinomial Naive Bayes model, to classify toxic comments. We initially faced class imbalance issues but improved the model's performance by transforming it into a binary classification task. This reduced false positives significantly.
+We primarily explored two different models, a Multinomial Naive Bayes model with binarized target data and oversampling to account for our class imbalance, and a neural network with embeddings. 
 
-We also experimented with word embeddings and neural networks to improve model performance but encountered challenges in reducing false negatives.
+We encountered challenges in reducing false negatives and false positives- Below, we can see the confusion matrix results of out MNB, as well as our model with embeddings, demonstrating the difficulty our models had with achieving high F1 scores (minimizing both false negatives and false positives)
+
+__MULTINOMIAL NAIVE BAYES__
+
 <img width="583" alt="Screenshot 2023-10-24 at 3 01 41 PM" src="https://github.com/slowings/NLP_identifying_trolls/assets/113614318/2c8db969-7f99-4ede-a4f0-1160a6f7b78f">
+
+__MODEL WITH EMBEDDINGS__
+
+<img width="522" alt="Screenshot 2023-10-25 at 4 36 39 PM" src="https://github.com/slowings/NLP_identifying_trolls/assets/113614318/0bc1cb9b-6ea9-4b9d-acf6-819677f05b19">
 
 ## Conclusion
 
-Our capstone project aims to address the critical issue of online harassment through NLP models. While we've made progress in classifying toxic comments, there's room for improvement, especially in reducing false negatives. Our initial results suggest that oversampling the minority class may be necessary.  That being said, we can utilize our binary MNB classifier to begin the work of filtering comments. 
+Our capstone project aims to address the critical issue of online harassment through NLP models. While we've made progress in classifying toxic comments, there's room for improvement, especially in reducing false negatives. Our initial results suggest that oversampling the minority class may be necessary.  That being said, we can utilize either our binary MNB classifier to begin the work of filtering comments, or our model with embeddings, depending on if we'd like to minimize our false positives (toxic speech classified as non-toxic, emb model) or our false negatives (normal speech classified as toxic, MNB model) 
 
 ## Next Steps
-
-1. Address Class Imbalance: Implement a sampling strategy with our neural network to undersample our majority class
+1. Further Model Enhancements: Continue exploring advanced MNB patameter and hyperparameter tuning.
 
 2. BERT Model: Complete the BERT (Bidirectional Encoder Representations from Transformers) model and assess its precision in detecting toxic comments.
 
-3. Further Model Enhancements: Continue exploring advanced NLP models and techniques to improve the accuracy and reliability of the virtual moderator.
-
-4. Deployment: Consider how to deploy the virtual moderator to actively moderate online platforms and contribute to safer online spaces.
+3. Deployment: Consider how to deploy the virtual moderator to actively moderate online platforms and contribute to safer online spaces.
