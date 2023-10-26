@@ -1,6 +1,6 @@
 # Online Harassment Detection Capstone Project
 Using NLP to identify online harassment
-
+Like this project? Contact me on [LinkedIn](www.linkedin.com/in/sarah-lowing-330714242)
 ## Important Links
 * Link to data: [Jigsaw Toxic Comment Classification Challange](https://www.kaggle.com/competitions/jigsaw-toxic-comment-classification-challenge/data)
 * [Slideshow](https://docs.google.com/presentation/d/1sIyA66zn8tSioSQeL-PfIgbk4osqfjKKVfznTv9qQ1E/edit?usp=sharing)
