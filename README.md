@@ -43,7 +43,7 @@ We also considered the length of comments to prepare for tokenization.
 
 We primarily explored two different models, a Multinomial Naive Bayes model with binarized target data and oversampling to account for our class imbalance, and a neural network with embeddings. 
 
-We encountered challenges in reducing false negatives and false positives- Below, we can see the confusion matrix results of out MNB, as well as our model with embeddings, demonstrating the difficulty our models had with achieving high F1 scores (minimizing both false negatives and false positives)
+We encountered challenges in reducing false negatives and false positives- Below, we can see the confusion matrix results of out MNB, as well as our model with embeddings, demonstrating the difficulty our models had with minimizing both false negatives and false positives.  While working with global models, we used F1 scores to evaluate our results for the aforementioned reason, and had our best results with the MNB model (.94 for nontoxic, and .63 for toxic).  However, in order to compare our MNB with our model with embeddings, we turn to accuracy as well as evaluating our confusion matrices for a more nuanced understanding of our models performance.  Our model with embeddings had it's best F1 score in it's fourth epoch, with a F1 score of 56%, and accuracy of 94% on the validation data.
 
 __MULTINOMIAL NAIVE BAYES__
 
